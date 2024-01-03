@@ -54,6 +54,13 @@ def result(board, action):
     """
     Returns the board that results from making move (i, j) on the board.
     """
+    MAX_INDEX = 2
+    # print("action:", action)
+    if action[0] > MAX_INDEX or action[0] > MAX_INDEX:
+        raise OverflowError
+    if action[0] < 0 or action[0] < 0:
+        raise OverflowError
+
     user = player(board)
     board_run = copy.deepcopy(board)
     board_run[action[0]][action[1]] = player(board)
