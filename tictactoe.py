@@ -56,6 +56,8 @@ def result(board, action):
     """
     MAX_INDEX = 2
     # print("action:", action)
+    if action == None:
+        raise OverflowError
     if len(action) < 2:
         raise OverflowError
     if action[0] > MAX_INDEX or action[0] > MAX_INDEX:
